@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id= "app">
+        <outer/>
+    </div>
+    <script>
+        Vue.component('inner', {
+            data() {
+                return {
+                    studentDetails: [
+                        { id: 123, name: 'Kareen', age: 17 },
+                        { id: 124, name: 'Jane', age: 19 },
+                        { id: 125, name: 'Micki', age: 18 },
+                        { id: 126, name: 'Elle', age: 17 },
+                        { id: 127, name: 'Steel', age: 20 }
+                    ]
+                }
+            },
+            template: 
+                `<div>
+                    <li v-for="a in studentDetails">{{a.id}} : {{a.name}} : {{a.age}}</li>
+                </div>
+                `,
+        })
+        Vue.component('outer', {
+            data() {
+                return {}
+            },
+            template:
+                `<div>
+                    <ol>
+                        <inner/>
+                    </ol>
+                </div>`,
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {},
+        })
+    </script>
+</body>
+</html>
+
+<!-- Components allow us to encapsulate functionality and 
+    easily reuse them in multiple places in our applications. 
+    It is common to have components inside other components 
+    to compose the bigger features of our apps. -->

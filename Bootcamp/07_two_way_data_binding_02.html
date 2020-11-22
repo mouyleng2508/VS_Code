@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <form onchange="console.log('changed!')" id="app">
+        <input type="checkbox" v-model="menus" value="Menu 1">
+        <input type="checkbox" v-model="menus" value="Menu 2">
+        <input type="checkbox" v-model="menus" value="Menu 3">
+        <h1>{{ menus }}</h1>
+    </form>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                menus: []
+            }
+        })
+    </script>
+</body>
+</html>

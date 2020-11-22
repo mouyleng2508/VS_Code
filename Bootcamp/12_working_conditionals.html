@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form>
+            <input 
+                type="text" 
+                v-model="name"
+                placeholder="Enter your name here">
+                <h1 v-if="name == 'Mouyleng Heng'" style="color: green;">Access Granted welcom Mr/Ms. {{name}}</h1>
+                <h1 v-else style="color: red;">Access Denied Sorry Mr/Ms. {{name}}</h1>
+             
+        </form>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                name: "Mouyleng Heng",
+                isActive: true
+            }
+        })
+    </script>
+</body>
+</html>

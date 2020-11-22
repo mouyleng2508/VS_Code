@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1><a v-bind:href="facebook">
+            {{ facebook }}
+        </a></h1>
+        <h1><a v-bind:href="google">
+            {{ google }}
+        </a></h1>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                facebook : "https://www.facebook.com/",
+                google : "https://www.google.com/"
+            }
+        })
+    </script>
+</body>
+</html>

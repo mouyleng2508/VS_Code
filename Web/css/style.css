@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: monospace , sans-serif ;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    width: 130px;
+    margin-top: 5px;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #c5e8ff;
+    width: 100%;
+}
+
+.paw_menu{
+    width: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.greet_txt {
+    position: relative;
+    color: #3d5e79;
+    font-size: 15px;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.welcome_txt {
+    position: relative;
+    font-size: x-large;
+    color: #3d5e79;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.panda_wave_hand {
+    width: 140px;
+
+}
+
+.blue_container {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #3d5e79;
+}
+
+.panda_sleep {
+    width: 100px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+
+
+.contact_logo {
+    position: absolute;
+    display: inline;
+}
+
+.contact_logo a {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background-color: #c5e8ff;
+    color: #3d5e79;
+    margin: 0 4px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    transition: 0.4s linear;
+}
+
+a .fa-facebook-f:hover{
+    color: #3b5998;
+}
+
+a .fa-twitter:hover{
+    color: #00acee;
+}
+
+a .fa-instagram:hover{
+    color: #c32aa3;
+}
+
+a .fa-pinterest-p:hover{
+    color: #c8232c;
+}
+
+a .fa-wordpress-simple:hover{
+    color: #21759b;
+}
+
+a .fa-linkedin-in:hover{
+    color: #0e76a8;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="helloMethod"></button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                helloMethod:function(){
+                    alert("Hello from the Vue method")
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!-- A Vue method is a function associated with the 
+    Vue instance. Methods are defined inside the 
+    'methods' property. Methods are especially 
+    useful when you need to perform an action 
+    and you attach a v-on directive on an element 
+    to handle events.  -->

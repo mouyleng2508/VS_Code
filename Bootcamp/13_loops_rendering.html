@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <form id="app">
+        <table>
+            <ol v-for="table_details in table_details">
+                {{table_details.id}} : 
+                {{table_details.name}} :
+                {{table_details.age}}
+            </ol>
+        </table>
+    </form>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                table_details: [
+                    { id: 123, name: 'Kareen', age: 17 },
+                    { id: 124, name: 'Jane', age: 19 },
+                    { id: 125, name: 'Micki', age: 18 },
+                    { id: 126, name: 'Elle', age: 17 },
+                    { id: 127, name: 'Steel', age: 20 }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

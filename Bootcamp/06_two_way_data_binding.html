@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <input type="text" v-model="message1">
+    <h1 id="app">
+        {{message1}}
+    </h1> -->
+
+    <form onchange="console.log('changed!')" id="app">
+        <input type="text" v-model="message">
+        <h1>{{ message }}</h1>
+    </form>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message : ''
+            }
+        })
+    </script>
+</body>
+</html>

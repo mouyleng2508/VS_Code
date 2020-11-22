@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" >
+        <a v-on:mouseover="mouseover" 
+            v-on:mouseleave="mouseleave"
+            v-bind:class="{active:isActive, notactive:!isActive}">
+            {{messsage}}
+        </a>
+    </div>
+
+    <style>
+        .active{
+            color: blue;
+            font-size: 40px;
+        }
+        .notactive{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                messsage: 'Hello World',
+                isActive: false
+            },
+            methods: {
+                mouseover: function(){
+                    this.isActive = !this.isActive
+                },    
+                mouseleave: function(){
+                    this.isActive = !this.isActive
+                }
+            }
+        })
+    </script>
+</body>
+</html>

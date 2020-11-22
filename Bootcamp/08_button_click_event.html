@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <form onchange="console.log('changed!')" id="app">
+        <input type="radio" value="increment" v-model="count">
+        <input type="radio" value="decrement" v-model="count">
+        <h1>{{ count }}</h1>
+    </form>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            }
+        })
+    </script>
+</body>
+</html>
